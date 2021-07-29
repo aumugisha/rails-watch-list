@@ -1,0 +1,18 @@
+<div class="container border">
+
+  <h1 class="text-center"> Lists</h1>
+  <ul class="list-group">
+    <% @lists.each do |list| %>
+      <div class="card">
+        <li class="list-group-item"> <%= link_to list.name, list_path(list)%> </li>
+      </div>
+    
+      <br>
+    <% end %>
+  </ul>
+
+</div>
+
+
+
+<%= link_to "Add new list", new_list_path %>
